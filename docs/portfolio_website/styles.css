@@ -1,0 +1,175 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+    padding-top: 56px; /* Adjust for fixed navbar */
+}
+
+section {
+    padding: 6rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #4169E1 0%, #3F00FF 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Projects Section */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* About Section */
+.profile-img {
+    max-width: 300px;
+    border: 8px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Icons */
+.social-icon {
+    color: #4169E1;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #3F00FF;
+}
+
+.social-icon-footer {
+    color: white;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.social-icon-footer:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+/* Section Headings */
+section h2 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background: #4169E1;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+        max-width: 280px;
+    }
+}
+
+/* Custom Badge Colors */
+.badge {
+    padding: 0.5em 0.8em;
+    font-weight: 500;
+}
+
+/* Card enhancements */
+.card-text {
+    color: #555;
+}
+
+/* Background pattern for light sections */
+.bg-light {
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.bg-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#dee2e6 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.bg-light > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animation for links */
+a {
+    transition: all 0.2s ease;
+}
+
+/* Form styling */
+.form-control:focus {
+    border-color: #4169E1;
+    box-shadow: 0 0 0 0.25rem rgba(65, 105, 225, 0.25);
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #4169E1;
+    border-color: #4169E1;
+}
+
+.btn-primary:hover {
+    background-color: #3F00FF;
+    border-color: #3F00FF;
+}
+
+.btn-outline-primary {
+    color: #4169E1;
+    border-color: #4169E1;
+}
+
+.btn-outline-primary:hover {
+    background-color: #4169E1;
+    border-color: #4169E1;
+}

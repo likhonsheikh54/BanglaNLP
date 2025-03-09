@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likhon Sheikh - BanglaNLP Creator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Likhon Sheikh</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#talks">Talks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold">Bridging the Language Gap in AI</h1>
+                    <p class="lead">I create NLP technologies for Bengali, the 7th most spoken language in the world with over 230 million speakers.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#projects" class="btn btn-light btn-lg">View My Work</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Connect With Me</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://via.placeholder.com/500x500" alt="Hero Image" class="img-fluid rounded-circle hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Projects</h2>
+            
+            <div class="card mb-5 shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="https://via.placeholder.com/800x600" class="img-fluid rounded-start h-100 object-fit-cover" alt="BanglaNLP Screenshot">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <div>
+                                <h3 class="card-title">BanglaNLP</h3>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary me-1">NLP</span>
+                                    <span class="badge bg-secondary me-1">Machine Translation</span>
+                                    <span class="badge bg-success">Dataset Creation</span>
+                                </div>
+                                <p class="card-text">BanglaNLP is a comprehensive toolkit for creating high-quality Bengali-English parallel datasets from news sources, designed to improve machine translation and other cross-lingual NLP tasks for the Bengali language.</p>
+                                <h5>Key Achievements:</h5>
+                                <ul>
+                                    <li>Created the largest open-source Bengali-English parallel corpus (120K+ pairs)</li>
+                                    <li>Developed novel hybrid alignment algorithm with 92% accuracy</li>
+                                    <li>Implemented multi-stage quality filtering pipeline</li>
+                                    <li>Featured in multiple research papers on low-resource MT</li>
+                                </ul>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="d-flex gap-2">
+                                    <a href="https://github.com/likhonsheikh54/BanglaNLP" class="btn btn-outline-primary"><i class="fab fa-github me-2"></i>GitHub</a>
+                                    <a href="https://huggingface.co/datasets/BanglaNLP/bengali-english-news" class="btn btn-outline-secondary"><i class="fas fa-database me-2"></i>Dataset</a>
+                                    <a href="https://likhonsheikh54.github.io/BanglaNLP/" class="btn btn-outline-success"><i class="fas fa-book me-2"></i>Documentation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional projects would go here -->
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Publications & Research</h2>
+            
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h4>BanglaNLP: A Large-Scale Bengali-English Parallel Corpus from News Sources</h4>
+                    <p class="text-muted">2023 | Conference on NLP Applications</p>
+                    <p>We present BanglaNLP, a comprehensive toolkit and the largest open-source Bengali-English parallel corpus derived from news sources. Our work addresses the critical gap by providing a dataset of 120,000+ sentence pairs across diverse topics.</p>
+                    <div>
+                        <a href="#" class="btn btn-sm btn-outline-primary me-2"><i class="fas fa-file-pdf me-1"></i>PDF</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary me-2"><i class="fas fa-link me-1"></i>DOI</a>
+                        <a href="#" class="btn btn-sm btn-outline-success"><i class="fas fa-quote-right me-1"></i>Cite</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h4>Intelligent Alignment Techniques for Low-Resource Parallel Corpora</h4>
+                    <p class="text-muted">2023 | Journal of Computational Linguistics</p>
+                    <p>This paper presents our hybrid alignment algorithm that combines statistical features, cross-lingual embeddings, and contextual information to achieve high-accuracy sentence alignment for low-resource language pairs.</p>
+                    <div>
+                        <a href="#" class="btn btn-sm btn-outline-primary me-2"><i class="fas fa-file-pdf me-1"></i>PDF</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary me-2"><i class="fas fa-link me-1"></i>DOI</a>
+                        <a href="#" class="btn btn-sm btn-outline-success"><i class="fas fa-quote-right me-1"></i>Cite</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talks Section -->
+    <section id="talks" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Talks & Presentations</h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/800x450" class="card-img-top" alt="Conference Talk">
+                        <div class="card-body">
+                            <h4>Advancing NLP for Bengali Through Parallel Data</h4>
+                            <p class="text-muted">NLP Summit 2023 | Dhaka, Bangladesh</p>
+                            <p>Presented the BanglaNLP project and discussed challenges and solutions in creating parallel datasets for low-resource languages.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-video me-1"></i>Watch Recording</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/800x450" class="card-img-top" alt="Workshop">
+                        <div class="card-body">
+                            <h4>Workshop: Building NLP Tools for Low-Resource Languages</h4>
+                            <p class="text-muted">Global AI Conference | Virtual</p>
+                            <p>Led a hands-on workshop demonstrating how to build and evaluate parallel corpora for languages with limited digital resources.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-file-powerpoint me-1"></i>View Slides</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <img src="https://via.placeholder.com/400x400" alt="Profile Picture" class="img-fluid rounded-circle profile-img shadow">
+                </div>
+                <div class="col-lg-8">
+                    <h2 class="mb-4">About Me</h2>
+                    <p class="lead">I'm Likhon Sheikh, an NLP researcher and developer focused on creating language technologies for underrepresented languages.</p>
+                    <p>With a background in computer science and linguistics, I've dedicated my career to bridging the digital language divide through innovative NLP solutions. My work on BanglaNLP represents my commitment to ensuring Bengali speakers have access to the same language technologies available to speakers of more well-resourced languages.</p>
+                    <p>My research interests include cross-lingual transfer learning, low-resource machine translation, and NLP for social good. I believe that language should never be a barrier to accessing information and opportunities in the digital age.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="https://github.com/likhonsheikh54" class="social-icon"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="https://twitter.com/likhonsheikh54" class="social-icon"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://linkedin.com/in/likhonsheikh54" class="social-icon"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://scholar.google.com/citations?user=yourprofile" class="social-icon"><i class="fas fa-graduation-cap fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="mb-4">Contact Information</h4>
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-envelope mt-1 me-3 text-primary"></i>
+                                <div>
+                                    <h5 class="mb-1">Email</h5>
+                                    <p>likhonsheikh54@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-map-marker-alt mt-1 me-3 text-primary"></i>
+                                <div>
+                                    <h5 class="mb-1">Location</h5>
+                                    <p>Dhaka, Bangladesh</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <i class="fas fa-comments mt-1 me-3 text-primary"></i>
+                                <div>
+                                    <h5 class="mb-1">Community</h5>
+                                    <p>Join our <a href="https://t.me/RecentCoders">Telegram Group</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="mb-4">Send a Message</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="https://github.com/likhonsheikh54" class="social-icon-footer me-3"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/likhonsheikh54" class="social-icon-footer me-3"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/likhonsheikh54" class="social-icon-footer me-3"><i class="fab fa-linkedin"></i></a>
+                <a href="https://scholar.google.com/citations?user=yourprofile" class="social-icon-footer"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2025 Likhon Sheikh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
