@@ -1,0 +1,5 @@
+theme: jekyll-theme-minimal
+title: BanglaNLP
+description: Bengali-English Machine Translation Dataset Tools
+show_downloads: true
+google_analytics:

@@ -1,0 +1,113 @@
+site_name: BanglaNLP
+site_description: Bengali-English Machine Translation Dataset Tools - A comprehensive toolkit for creating high-quality Bengali-English parallel datasets from news sources
+site_url: https://likhonsheikh54.github.io/BanglaNLP/
+repo_url: https://github.com/likhonsheikh54/BanglaNLP
+site_author: Likhon Sheikh
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    # Dark mode    
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.tabs.link
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+    
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/likhonsheikh54/BanglaNLP
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/RecentCoders
+      name: RecentCoders Telegram Channel
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX # Replace with actual Google Analytics ID
+  consent:
+    title: Cookie consent
+    description: >
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Configuration: getting-started/configuration.md
+  - Features:
+    - Scraping: features/scraping.md
+    - Filtering: features/filtering.md
+    - Dataset Creation: features/dataset.md
+    - Hugging Face Integration: features/huggingface.md
+  - Usage:
+    - Command Line: usage/cli.md
+    - Automation: usage/automation.md
+    - Examples: usage/examples.md
+  - Dataset:
+    - Format: dataset/format.md
+    - Statistics: dataset/statistics.md
+    - Quality Metrics: dataset/quality.md
+  - API Reference:
+    - Scrapers: api/scrapers.md
+    - Dataset Builder: api/dataset.md
+    - Processing: api/processing.md
+  - Contributing: contributing.md
+  - Changelog: changelog.md
+
+markdown_extensions:
+  - meta
+  - attr_list
+  - def_list
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - pymdownx.critic
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - footnotes
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - social
+  - tags
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true

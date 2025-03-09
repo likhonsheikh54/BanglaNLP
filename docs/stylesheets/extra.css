@@ -1,0 +1,88 @@
+/* Custom styles for BanglaNLP documentation */
+
+:root {
+  --md-primary-fg-color: #5e35b1;
+  --md-primary-fg-color--light: #9575cd;
+  --md-primary-fg-color--dark: #4527a0;
+  --md-accent-fg-color: #7c4dff;
+}
+
+/* Banner styling */
+.md-typeset h1 {
+  font-weight: 700;
+  margin-bottom: 1.5em;
+  color: var(--md-primary-fg-color);
+}
+
+/* Cards style */
+.grid.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.grid.cards > * {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid.cards > *:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Bengali text styling */
+.bn-text {
+  font-family: 'Noto Sans Bengali', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Code sample styling */
+.md-typeset pre code {
+  border-radius: 0.5rem;
+}
+
+/* Table improvements */
+.md-typeset table:not([class]) {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Footer styling */
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+/* Telegram link styling */
+a[href*="t.me"] {
+  font-weight: 500;
+  color: #2ca5e0;
+}
+
+a[href*="t.me"]:hover {
+  text-decoration: underline;
+}
+
+/* Responsive typography */
+@media screen and (max-width: 76.1875em) {
+  .md-typeset h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Enhanced badges */
+.md-typeset img[src*="img.shields.io"] {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+/* Admonition styling */
+.md-typeset .admonition {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

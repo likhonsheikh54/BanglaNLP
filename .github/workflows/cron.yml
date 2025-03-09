@@ -1,0 +1,29 @@
+name: Dataset Maintenance
+
+on:
+  schedule:
+    - cron: '0 1 * * *'  # Daily at 1 AM
+  workflow_dispatch:
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+          
+      - name: Run maintenance
+        run: python scripts/maintenance.py
+        
+      - name: Update stats
+        run: python scripts/generate_stats.py
+        
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/stats.json
+          git commit -m "Update dataset statistics" || exit 0
+          git push
