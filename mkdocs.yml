@@ -74,6 +74,7 @@ nav:
     - Examples: usage/examples.md
   - Dataset:
     - Format: dataset/format.md
+    - Structure: dataset/structure.md
     - Statistics: dataset/statistics.md
     - Quality Metrics: dataset/quality.md
   - API Reference:
