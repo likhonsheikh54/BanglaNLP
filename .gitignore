@@ -19,3 +19,6 @@ scraping.log
 # IDE
 .vscode/
 .idea/
+
+# windsurf rules
+.windsurfrules
