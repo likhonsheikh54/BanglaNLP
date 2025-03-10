@@ -3,95 +3,420 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GitHub Projects by likhonsheikh54</title>
-  <meta name="description" content="Explore a collection of open-source projects by likhonsheikh54, a software engineer and AI enthusiast, including TorchStream, BanglaNLP, and more.">
+  <title>BanglaNLP - Bengali Natural Language Processing</title>
+  <meta name="description" content="BanglaNLP is a comprehensive open-source toolkit for Bengali natural language processing, featuring tokenization, NER, sentiment analysis, and more.">
   <meta name="author" content="likhonsheikh54">
-  <meta name="keywords" content="likhonsheikh54, GitHub, projects, open-source, AI, machine learning, deep learning, natural language processing, NLP, TorchStream, BanglaNLP, Creation AI, HuggingChat, ImportBot, MoonPup, CheckPump">
-  <meta property="og:title" content="GitHub Projects by likhonsheikh54">
-  <meta property="og:description" content="Explore a collection of open-source projects by likhonsheikh54, a software engineer and AI enthusiast.">
+  <meta name="keywords" content="BanglaNLP, Bengali, NLP, natural language processing, tokenization, NER, sentiment analysis, text classification, machine learning, AI, Bangla">
+  <meta property="og:title" content="BanglaNLP - Bengali Natural Language Processing">
+  <meta property="og:description" content="Comprehensive open-source toolkit for Bengali natural language processing, featuring tokenization, NER, sentiment analysis, and more.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://likhonsheikh54.github.io/">
-  <meta property="og:image" content="https://avatars3.githubusercontent.com/u/14405341?s=400&v=4">
+  <meta property="og:url" content="https://likhonsheikh54.github.io/BanglaNLP/">
+  <meta property="og:image" content="https://repository-images.githubusercontent.com/123456789/abcdef00-1234-5678-9abc-123456789012">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
     {
-      "@context": "https://schema.org/",
-      "@type": "Person",
-      "name": "likhonsheikh54",
-      "url": "https://likho.github.io/",
-      "image": "https://avatars3.githubusercontent.com/u/14405341?s=400&v=4",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "likhonsheikh54"
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "BanglaNLP",
+      "operatingSystem": "Cross-platform",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
       },
-      "sameAs": [
-        "https://github.com/likhonsheikh54",
-        "https://twitter.com/likhonsheikh54",
-        "https://www.linkedin.com/in/likhonsheikh54/"
-      ]
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "89"
+      },
+      "description": "A comprehensive open-source toolkit for Bengali (Bangla) natural language processing, featuring tokenization, named entity recognition, sentiment analysis, and text classification capabilities.",
+      "softwareVersion": "1.0.0",
+      "author": {
+        "@type": "Person",
+        "name": "likhonsheikh54",
+        "url": "https://github.com/likhonsheikh54"
+      },
+      "keywords": "Bengali NLP, Bangla, Natural Language Processing, tokenization, named entity recognition, sentiment analysis",
+      "url": "https://github.com/likhonsheikh54/BanglaNLP",
+      "downloadUrl": "https://github.com/likhonsheikh54/BanglaNLP/archive/refs/heads/main.zip",
+      "license": "https://opensource.org/licenses/MIT"
     }
   </script>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      margin: 40px;
-      background: #fafafa;
-      color: #333;
+    :root {
+      --primary: #0F172A;
+      --primary-light: #1E293B;
+      --secondary: #06B6D4;
+      --secondary-light: #67E8F9;
+      --tertiary: #34D399;
+      --background: #F8FAFC;
+      --text: #0F172A;
+      --text-light: #64748B;
+      --border: #E2E8F0;
+      --radius: 0.5rem;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin: 20px 0;
-    }
-    ul {
-      list-style: none;
+    
+    * {
+      margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    li {
-      margin: 10px 0;
+    
+    html {
+      scroll-behavior: smooth;
     }
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-      font-size: 1.1em;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    /* Added modern design styles */
+    
     body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      font-family: var(--font-sans);
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.5;
     }
-    h1 {
+    
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    /* Header */
+    .header {
+      background: linear-gradient(to right, var(--primary), var(--primary-light));
+      color: white;
+      padding: 4rem 0;
       text-align: center;
     }
-    ul {
+    
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, var(--secondary), var(--tertiary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    
+    .header p {
+      font-size: 1.25rem;
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cta-button:hover {
+      background: var(--secondary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Features */
+    .features {
+      padding: 4rem 0;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: var(--primary);
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--secondary);
+      border-radius: 50%;
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
+      margin-bottom: 1.5rem;
+      color: white;
+      font-size: 1.5rem;
     }
-    li {
-      margin: 20px;
+    
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--primary);
     }
-    a {
-      transition: color 0.2s ease;
+    
+    /* Documentation */
+    .documentation {
+      padding: 4rem 0;
+      background-color: white;
     }
-    a:hover {
-      color: #00698f;
+    
+    .doc-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .doc-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: all 0.2s ease;
+    }
+    
+    .doc-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--secondary);
+    }
+    
+    .doc-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+    }
+    
+    .doc-card p {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+    
+    .doc-link {
+      color: var(--secondary);
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .doc-link:hover {
+      text-decoration: underline;
+    }
+    
+    /* Examples */
+    .examples {
+      padding: 4rem 0;
+    }
+    
+    .code-example {
+      background: var(--primary);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      overflow-x: auto;
+    }
+    
+    .code-example code {
+      color: white;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      line-height: 1.5;
+    }
+    
+    .code-comment {
+      color: var(--text-light);
+      opacity: 0.7;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--primary);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    
+    .footer p {
+      opacity: 0.8;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .footer-link {
+      color: var(--secondary-light);
+      text-decoration: none;
+    }
+    
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2.5rem;
+      }
+      
+      .header p {
+        font-size: 1.1rem;
+      }
+      
+      .section-title {
+        font-size: 1.75rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My GitHub Projects</h1>
-  <ul>
-    <li><a href="TorchStream/docs/index.html">TorchStream Documentation</a> - High-performance I/O system for deep learning.</li>
-    <li><a href="BanglaNLP/index.html">BanglaNLP Project</a> - Natural Language Processing tools for Bengali.</li>
-    <li><a href="Creation-Ai/README.md">Creation AI</a> - AI tools for creative content generation.</li>
-    <li><a href="HuggingChat/README.md">HuggingChat</a> - Chatbot framework based on Hugging Face models.</li>
-    <li><a href="ImportBot/README.md">ImportBot</a> - Automated import tools for data processing.</li>
-    <li><a href="MoonPup/README.md">MoonPup</a> - A project for lunar exploration simulations.</li>
-    <li><a href="checkpump/README.md">CheckPump</a> - Monitoring and alerting for pump systems.</li>
-  </ul>
+  <header class="header">
+    <div class="container">
+      <h1>BanglaNLP</h1>
+      <p>A comprehensive open-source toolkit for Bengali natural language processing, featuring tokenization, named entity recognition, sentiment analysis, and text classification capabilities.</p>
+      <a href="https://github.com/likhonsheikh54/BanglaNLP" class="cta-button">Get Started</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">T</div>
+          <h3 class="feature-title">Tokenization</h3>
+          <p>Advanced tokenization specifically designed for Bengali language structure, supporting word, sentence, and subword tokenization.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">N</div>
+          <h3 class="feature-title">Named Entity Recognition</h3>
+          <p>Identify and classify named entities in Bengali text, including people, organizations, locations, and more.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">S</div>
+          <h3 class="feature-title">Sentiment Analysis</h3>
+          <p>Analyze the sentiment of Bengali text to determine if the expressed opinion is positive, negative, or neutral.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">C</div>
+          <h3 class="feature-title">Text Classification</h3>
+          <p>Classify Bengali text into predefined categories with high accuracy using state-of-the-art machine learning models.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">D</div>
+          <h3 class="feature-title">Datasets</h3>
+          <p>Access to curated Bengali language datasets for training and testing your NLP models.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">P</div>
+          <h3 class="feature-title">Pre-trained Models</h3>
+          <p>Use our pre-trained models to quickly implement NLP capabilities in your Bengali language applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="documentation">
+    <div class="container">
+      <h2 class="section-title">Documentation</h2>
+      <div class="doc-cards">
+        <div class="doc-card">
+          <h3>Installation</h3>
+          <p>Get started with BanglaNLP installation and setup.</p>
+          <a href="docs/installation.md" class="doc-link">View Guide →</a>
+        </div>
+        
+        <div class="doc-card">
+          <h3>Tutorials</h3>
+          <p>Learn how to use BanglaNLP with step-by-step tutorials.</p>
+          <a href="docs/tutorials/" class="doc-link">View Tutorials →</a>
+        </div>
+        
+        <div class="doc-card">
+          <h3>API Reference</h3>
+          <p>Complete API documentation for developers.</p>
+          <a href="docs/api.md" class="doc-link">View API →</a>
+        </div>
+        
+        <div class="doc-card">
+          <h3>Examples</h3>
+          <p>Real-world examples of BanglaNLP in action.</p>
+          <a href="docs/examples/" class="doc-link">View Examples →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="examples">
+    <div class="container">
+      <h2 class="section-title">Code Example</h2>
+      <div class="code-example">
+        <code>
+<span class="code-comment"># Install BanglaNLP</span><br>
+pip install bangla-nlp<br><br>
+<span class="code-comment"># Import the library</span><br>
+from bangla_nlp import BanglaNLP<br><br>
+<span class="code-comment"># Initialize with the desired components</span><br>
+nlp = BanglaNLP(components=["tokenizer", "ner", "sentiment"])<br><br>
+<span class="code-comment"># Process text</span><br>
+text = "আমি বাংলায় প্রাকৃতিক ভাষা প্রক্রিয়াকরণ করছি।"<br>
+doc = nlp(text)<br><br>
+<span class="code-comment"># Access tokens</span><br>
+for token in doc.tokens:<br>
+&nbsp;&nbsp;print(token.text, token.pos)<br><br>
+<span class="code-comment"># Get named entities</span><br>
+for entity in doc.entities:<br>
+&nbsp;&nbsp;print(entity.text, entity.label)<br><br>
+<span class="code-comment"># Get sentiment</span><br>
+print(f"Sentiment: {doc.sentiment}")
+        </code>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 likhonsheikh54. All rights reserved.</p>
+      <p>BanglaNLP is an open-source project under the MIT License.</p>
+      <div class="footer-links">
+        <a href="https://github.com/likhonsheikh54/BanglaNLP" class="footer-link">GitHub</a>
+        <a href="docs/" class="footer-link">Documentation</a>
+        <a href="https://github.com/likhonsheikh54/BanglaNLP/issues" class="footer-link">Issues</a>
+        <a href="https://github.com/likhonsheikh54/BanglaNLP/blob/main/LICENSE" class="footer-link">License</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

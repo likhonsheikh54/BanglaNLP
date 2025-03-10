@@ -1,0 +1,47 @@
+name: Deploy to Surge
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install surge
+        run: npm install -g surge
+
+      - name: Deploy to Surge
+        run: surge ./ bangla-nlp.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        env:
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+
+      # Optional: You can add more custom domains if needed
+      - name: Deploy to custom Surge domain
+        if: ${{ env.CUSTOM_DOMAIN }}
+        run: surge ./ ${{ env.CUSTOM_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+        env:
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+          CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
+
+      - name: Comment on commit
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.repos.createCommitComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.sha,
+              body: 'Deployed to:\n- https://bangla-nlp.surge.sh' + 
+                    (${{ env.CUSTOM_DOMAIN }} ? '\n- https://${{ env.CUSTOM_DOMAIN }}' : '')
+            })
