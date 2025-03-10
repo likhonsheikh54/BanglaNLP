@@ -1,10 +1,10 @@
 /* Custom styles for BanglaNLP documentation */
 
 :root {
-  --md-primary-fg-color: #5e35b1;
-  --md-primary-fg-color--light: #9575cd;
+  --md-primary-fg-color: #2a4365;
+  --md-primary-fg-color--light: #4299e1;
   --md-primary-fg-color--dark: #4527a0;
-  --md-accent-fg-color: #7c4dff;
+  --md-accent-fg-color: #ed64a6;
 }
 
 /* Banner styling */
@@ -85,4 +85,192 @@ a[href*="t.me"]:hover {
 .md-typeset .admonition {
   border-radius: 0.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+  padding: 2rem;
+  margin: 1rem 0;
+  background: var(--md-code-bg-color);
+  border-radius: 0.5rem;
+}
+
+.recent-coders-footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--md-primary-fg-color);
+  color: white;
+}
+
+.recent-coders-footer a {
+  color: var(--md-accent-fg-color);
+  text-decoration: none;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  background: var(--md-code-bg-color);
+  border-radius: 0.5rem;
+  transition: transform 0.2s;
+  opacity: 0;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Modern animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.feature-card.animate-in {
+    animation: slideIn 0.6s ease forwards;
+}
+
+/* Interactive elements */
+.copy-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background: var(--md-primary-fg-color);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+pre:hover .copy-button {
+    opacity: 1;
+}
+
+/* RecentCoders footer */
+.recent-coders-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-primary-fg-color--dark));
+}
+
+.recent-coders-banner img {
+    width: 32px;
+    height: 32px;
+}
+
+.recent-coders-banner a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.recent-coders-banner a:hover {
+    transform: scale(1.05);
+}
+
+/* Visualization containers */
+.visualization-container {
+    background: var(--md-code-bg-color);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+    min-height: 400px;
+}
+
+/* Statistics Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background: var(--md-primary-fg-color);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    background: linear-gradient(45deg, var(--md-primary-fg-color--light), var(--md-accent-fg-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animated bars */
+.quality-bar {
+    height: 8px;
+    background: var(--md-primary-fg-color--light);
+    border-radius: 4px;
+    transform-origin: left;
+    animation: grow 1.5s ease-out forwards;
+}
+
+@keyframes grow {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+/* Comparison Grid */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--md-primary-fg-color--light);
+    border-radius: var(--radius);
+}
+
+.quality-metrics-container {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    background: var(--md-code-bg-color);
+    border-radius: var(--radius);
+    margin: 2rem 0;
+}
+
+.metric-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--md-primary-fg-color);
 }

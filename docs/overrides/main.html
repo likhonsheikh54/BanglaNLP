@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block footer %}
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class="md-footer-copyright">
+                {% if config.copyright %}
+                    <div class="md-footer-copyright__highlight">
+                        {{ config.copyright }}
+                    </div>
+                {% endif %}
+            </div>
+            {% include "partials/social.html" %}
+        </div>
+    </div>
+    <div class="recent-coders-footer">
+        Powered by <a href="https://t.me/RecentCoders" target="_blank">RecentCoders</a>
+        <br>
+        A hub for developers, innovators, and tech enthusiasts shaping the future of coding
+    </div>
+    <div class="recent-coders-banner">
+        <img src="assets/telegram-logo.svg" alt="Telegram">
+        <a href="https://t.me/RecentCoders" target="_blank" rel="noopener">
+            Join RecentCoders on Telegram - Your Hub for Tech Innovation
+        </a>
+    </div>
+</footer>
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+{% endblock %}

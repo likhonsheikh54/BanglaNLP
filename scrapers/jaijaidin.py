@@ -1,5 +1,5 @@
-from .base_scraper import BaseScraper
 import logging
+from .base_scraper import BaseScraper
 
 class JaiJaidinScraper(BaseScraper):
     def extract_article(self, url):
@@ -8,15 +8,15 @@ class JaiJaidinScraper(BaseScraper):
             return None
             
         try:
-            title = soup.select_one('div.news-details h1').text.strip()
-            content = ' '.join([p.text.strip() for p in soup.select('div.news-content p')])
-            date = soup.select_one('span.date-time').get_text(strip=True)
-            language = 'bn'  # Jai Jaidin is primarily Bengali
+            title = soup.select_one('h2.article-title').text.strip()
+            content = ' '.join([p.text.strip() for p in soup.select('div.article-text p')])
+            date = soup.select_one('div.publish-date').text.strip()
+            language = 'bn' if not '/en/' in url else 'en'
             
             return {
                 'url': url,
                 'title': title,
-                'content': content, 
+                'content': content,
                 'date': date,
                 'language': language
             }

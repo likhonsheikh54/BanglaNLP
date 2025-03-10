@@ -33,11 +33,26 @@ theme:
     - search.suggest
     - content.tabs.link
     - content.code.copy
+    - toc.integrate
+    - header.autohide
   icon:
     repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
+  custom_dir: docs/overrides
     
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - https://cdn.jsdelivr.net/npm/apexcharts
+  - https://cdn.jsdelivr.net/npm/d3@7
+  - javascripts/charts.js
+  - javascripts/extra.js
+  - javascripts/visualizations.js
 
 extra:
   social:
@@ -45,7 +60,7 @@ extra:
       link: https://github.com/likhonsheikh54/BanglaNLP
     - icon: fontawesome/brands/telegram
       link: https://t.me/RecentCoders
-      name: RecentCoders Telegram Channel
+      name: Join RecentCoders on Telegram
   analytics:
     provider: google
     property: G-XXXXXXXXXX # Replace with actual Google Analytics ID
@@ -56,6 +71,10 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
+  generator: false
+  
+copyright: >
+  Powered by <a href="https://t.me/RecentCoders">RecentCoders</a> - A hub for developers, innovators, and tech enthusiasts
 
 nav:
   - Home: index.md
@@ -107,8 +126,16 @@ plugins:
   - search
   - minify:
       minify_html: true
+      minify_js: true
+      minify_css: true
   - social
   - tags
   - git-revision-date-localized:
       type: date
       enable_creation_date: true
+  - optimize:
+      optimize_css: true
+      optimize_js: true
+  - charts
+  - mermaid:
+      version: 9.3.0

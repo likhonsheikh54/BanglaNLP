@@ -1,5 +1,5 @@
-from .base_scraper import BaseScraper
 import logging
+from .base_scraper import BaseScraper
 
 class BDPratidinScraper(BaseScraper):
     def extract_article(self, url):
@@ -8,15 +8,15 @@ class BDPratidinScraper(BaseScraper):
             return None
             
         try:
-            title = soup.select_one('h1.detail-title').text.strip()
+            title = soup.select_one('h2.news-title').text.strip()
             content = ' '.join([p.text.strip() for p in soup.select('div.news-details p')])
-            date = soup.select_one('span.details-time').get_text(strip=True)
-            language = 'bn'  # BD Pratidin is primarily Bengali
+            date = soup.select_one('span.time').text.strip()
+            language = 'bn' if '/bangla/' in url else 'en'
             
             return {
                 'url': url,
                 'title': title,
-                'content': content, 
+                'content': content,
                 'date': date,
                 'language': language
             }
